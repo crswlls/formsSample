@@ -1,6 +1,11 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using GalaSoft.MvvmLight.Views;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace formsSample
 {
@@ -36,7 +41,16 @@ namespace formsSample
                     }
                 }
             };*/
-            MainPage = GetMainPage();
+
+            var nav = new NavigationService();
+            nav.Configure(nameof(NewViewModel), typeof(NewPage));
+            nav.Configure(nameof(MainViewModel), typeof(MyPage));
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
+
+            var page = new NavigationPage(GetMainPage());
+            nav.Initialize(page);
+
+            MainPage = page;
         }
 
         protected override void OnStart ()
@@ -53,6 +67,8 @@ namespace formsSample
         {
             // Handle when your app resumes
         }
+
+
     }
 }
 
