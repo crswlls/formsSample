@@ -5,12 +5,11 @@ using Xamarin.Forms;
 
 namespace formsSample
 {
-    public partial class NewPage : ContentPage
+    public partial class NativelyRenderedPage : ContentPage
     {
-        public NewPage ()
+        public NativelyRenderedPage ()
         {
             InitializeComponent ();
-            BindingContext = App.Locator.NewVm;
         }
     }
 }

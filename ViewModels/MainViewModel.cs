@@ -9,12 +9,10 @@ namespace formsSample
     public class MainViewModel : ViewModelBase
     {
         private INavigationService _nav;
-        public RelayCommand NavigateCommand { get;set;}
 
         public MainViewModel(INavigationService nav)
         {
             _nav = nav;
-            NavigateCommand = new RelayCommand(() => { nav.NavigateTo(nameof(NewViewModel)); });
         }
 
         /// <summary>
@@ -67,6 +65,17 @@ namespace formsSample
                         ClickCount++;
                         _nav.NavigateTo(nameof(NewViewModel));
                     }));
+            }
+        }
+
+        public RelayCommand NavigateCommand
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    _nav.NavigateTo(nameof(NativelyRenderedViewModel));
+                 });
             }
         }
     }

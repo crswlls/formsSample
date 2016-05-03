@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="formsSample.NewPage">
     <ContentPage.Content>
-    <Button Text="New page button"
-            VerticalOptions="Center" />
+    <StackLayout>
+        <Button Text="This is a forms page" />
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>

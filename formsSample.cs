@@ -45,6 +45,7 @@ namespace formsSample
             var nav = new NavigationService();
             nav.Configure(nameof(NewViewModel), typeof(NewPage));
             nav.Configure(nameof(MainViewModel), typeof(MyPage));
+            nav.Configure(nameof(NativelyRenderedViewModel), typeof(NativelyRenderedPage));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
 
             var page = new NavigationPage(GetMainPage());

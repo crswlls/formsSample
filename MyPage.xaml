@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="formsSample.MyPage">
- 
-   
-
-            <Button Text="NAV"
-            Command="{Binding NavigateCommand}"
-            VerticalOptions="Center" />
+             <StackLayout>
+        <Button Text="Natively Rendered Page"
+        Command="{Binding NavigateCommand}" />
+    <Button Text="Forms Page"
+        Command="{Binding IncrementCommand}" />
+            </StackLayout>
  
 </ContentPage>

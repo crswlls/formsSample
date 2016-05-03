@@ -11,6 +11,7 @@ namespace formsSample
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<NewViewModel>();
+            SimpleIoc.Default.Register<NativelyRenderedViewModel>();
         }
      
         /// <summary>
@@ -33,11 +34,19 @@ namespace formsSample
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
             "CA1822:MarkMembersAsStatic",
             Justification = "This non-static member is needed for data binding purposes.")]
-        public NewViewModel NewVmx
+        public NewViewModel NewVm
         {
             get
             {
                 return ServiceLocator.Current.GetInstance<NewViewModel>();
+            }
+        }
+
+        public NativelyRenderedViewModel NativelyRenderedVm
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<NativelyRenderedViewModel>();
             }
         }
     }

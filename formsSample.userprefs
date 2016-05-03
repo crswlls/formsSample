@@ -1,1 +1,3 @@
-﻿<Properties StartupItem="iOS/formsSample.iOS.csproj" />
+﻿<Properties StartupItem="iOS/formsSample.iOS.csproj">
+  <MonoDevelop.Ide.ItemProperties.formsSample.Droid AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
