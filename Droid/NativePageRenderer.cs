@@ -32,7 +32,7 @@ namespace formsSample.Droid
 
         protected override void OnLayout (bool changed, int l, int t, int r, int b)
         {
-            base.OnLayout (changed, l, t, r, b);
+            //// base.OnLayout (changed, l, t, r, b);
             var msw = MeasureSpec.MakeMeasureSpec (r - l, MeasureSpecMode.Exactly);
             var msh = MeasureSpec.MakeMeasureSpec (b - t, MeasureSpecMode.Exactly);
             view.Measure(msw, msh);
