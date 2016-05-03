@@ -6,9 +6,25 @@ namespace formsSample
 {
     public class App : Application
     {
+        private static ViewModelLocator _locator;
+ 
+        public static ViewModelLocator Locator
+        {
+            get
+            {
+                return _locator ?? (_locator = new ViewModelLocator());
+            }
+        }
+     
+     
+        public static Page GetMainPage()
+        {
+            return new MyPage();
+        }
+
         public App ()
         {
-            // The root page of your application
+            /*// The root page of your application
             MainPage = new ContentPage {
                 Content = new StackLayout {
                     VerticalOptions = LayoutOptions.Center,
@@ -19,7 +35,8 @@ namespace formsSample
                         }
                     }
                 }
-            };
+            };*/
+            MainPage = GetMainPage();
         }
 
         protected override void OnStart ()
