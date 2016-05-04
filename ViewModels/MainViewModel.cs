@@ -63,7 +63,7 @@ namespace formsSample
                     () =>
                     {
                         ClickCount++;
-                        _nav.NavigateTo(nameof(NewViewModel));
+                        _nav.NavigateTo(nameof(MyListViewModel));
                     }));
             }
         }

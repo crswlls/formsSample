@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace formsSample
 {
-    public partial class NewPage : ContentPage
+    public partial class MyList : ContentPage
     {
-        public NewPage ()
+        public MyList ()
         {
             InitializeComponent ();
             BindingContext = App.Locator.NewVm;

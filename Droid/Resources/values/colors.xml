@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+<color name="material_blue_500">#9E9E9E</color>
+<color name="material_blue_700">#000000</color>
+<color name="accent">#9E9E9E</color>
+<color name="header_grey">#BDBDBD</color>
+<color name="white">#FFFFFF</color>
+</resources>
