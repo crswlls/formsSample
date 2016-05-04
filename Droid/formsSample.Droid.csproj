@@ -41,11 +41,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
-    <AndroidKeyStore>True</AndroidKeyStore>
-    <AndroidSigningKeyStore>./Keystore/audiogum/audiogum.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>!+Audiogum</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>Audiogum</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>!+Audiogum</AndroidSigningKeyPass>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
